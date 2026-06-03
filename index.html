@@ -9,6 +9,148 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .steps-infographic {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 2.5rem;
+      position: relative;
+    }
+    .steps-infographic::before {
+      content: '';
+      position: absolute;
+      top: 44px;
+      left: calc(12.5% + 12px);
+      width: calc(75% - 24px);
+      height: 2px;
+      background: repeating-linear-gradient(90deg, #c8d8b0 0, #c8d8b0 8px, transparent 8px, transparent 16px);
+      z-index: 0;
+    }
+    .step-card {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.25rem 1rem 1.25rem;
+      margin: 0 6px;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .step-card-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+    .step-bg-num {
+      position: absolute;
+      top: -8px;
+      right: -4px;
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .step-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+    .step-free-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .step-num-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .step-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      line-height: 1.35;
+    }
+    .step-card p {
+      font-size: 12px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Step 1 — Purple */
+    .step-s1 { background: #EEEDFE; }
+    .step-s1 .step-bg-num { color: #7F77DD; }
+    .step-s1 .step-icon-wrap { background: #CECBF6; color: #3C3489; }
+    .step-s1 .step-free-badge { background: #CECBF6; color: #3C3489; }
+    .step-s1 .step-num-label { color: #534AB7; }
+    .step-s1 h3 { color: #26215C; }
+    .step-s1 p { color: #534AB7; }
+
+    /* Step 2 — Teal */
+    .step-s2 { background: #E1F5EE; }
+    .step-s2 .step-bg-num { color: #1D9E75; }
+    .step-s2 .step-icon-wrap { background: #9FE1CB; color: #085041; }
+    .step-s2 .step-free-badge { background: #9FE1CB; color: #085041; }
+    .step-s2 .step-num-label { color: #0F6E56; }
+    .step-s2 h3 { color: #04342C; }
+    .step-s2 p { color: #0F6E56; }
+
+    /* Step 3 — Amber */
+    .step-s3 { background: #FAEEDA; }
+    .step-s3 .step-bg-num { color: #BA7517; }
+    .step-s3 .step-icon-wrap { background: #FAC775; color: #633806; }
+    .step-s3 .step-free-badge { background: #FAC775; color: #633806; }
+    .step-s3 .step-num-label { color: #854F0B; }
+    .step-s3 h3 { color: #412402; }
+    .step-s3 p { color: #854F0B; }
+
+    /* Step 4 — Pink */
+    .step-s4 { background: #FBEAF0; }
+    .step-s4 .step-bg-num { color: #D4537E; }
+    .step-s4 .step-icon-wrap { background: #F4C0D1; color: #72243E; }
+    .step-s4 .step-free-badge { background: #F4C0D1; color: #72243E; }
+    .step-s4 .step-num-label { color: #993556; }
+    .step-s4 h3 { color: #4B1528; }
+    .step-s4 p { color: #993556; }
+
+    .steps-footer-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      background: #F1EFE8;
+      border-radius: 12px;
+      font-size: 13px;
+      color: #444;
+    }
+    .steps-footer-note strong { color: #27500A; }
+
+    @media (max-width: 680px) {
+      .steps-infographic { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .steps-infographic::before { display: none; }
+      .step-card { margin: 0; }
+    }
+    @media (max-width: 400px) {
+      .steps-infographic { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -44,42 +186,61 @@
     <section id="how" class="section">
       <div class="container">
         <h2 class="section-title">How it works</h2>
-        <p class="section-sub">Four steps. All free of cost.</p>
+        <p class="section-sub">Four steps from curiosity to confident investor. Every one of them, free of cost.</p>
 
-        <figure class="howto-figure">
-          <img src="assets/smife-path.jpeg" alt="Your free path to the stock market — four steps: open a Demat account, first 1-on-1 session, 4-week mentorship program, final 1-on-1 follow-up. The SMIFE guarantee: 100% free, no fees, no upselling." />
-        </figure>
+        <div class="steps-infographic" aria-label="Four steps to get started">
 
-        <ol class="steps" aria-label="Four steps">
-          <li>
-            <span class="step-num">1</span>
-            <div>
-              <h3>Open your Demat account</h3>
-              <p>Start your journey by opening a Demat account with us at zero cost.</p>
-            </div>
-          </li>
-          <li>
-            <span class="step-num">2</span>
-            <div>
+          <div class="step-card step-s1">
+            <span class="step-bg-num" aria-hidden="true">01</span>
+            <div class="step-card-inner">
+              <div class="step-icon-wrap">💬</div>
+              <span class="step-free-badge">FREE</span>
+              <p class="step-num-label">Step 01</p>
               <h3>First 1-on-1 session</h3>
-              <p>A complimentary personal consultation to set your goals.</p>
+              <p>A personal consultation to understand where you are today and what you want from the markets.</p>
             </div>
-          </li>
-          <li>
-            <span class="step-num">3</span>
-            <div>
-              <h3>4-week mentorship program</h3>
-              <p>Exclusive access to investing essentials and advanced strategies.</p>
+          </div>
+
+          <div class="step-card step-s2">
+            <span class="step-bg-num" aria-hidden="true">02</span>
+            <div class="step-card-inner">
+              <div class="step-icon-wrap">🏦</div>
+              <span class="step-free-badge">FREE</span>
+              <p class="step-num-label">Step 02</p>
+              <h3>Open your Demat account</h3>
+              <p>We help you open a Demat account at zero cost. No paperwork chase, no hidden charges.</p>
             </div>
-          </li>
-          <li>
-            <span class="step-num">4</span>
-            <div>
+          </div>
+
+          <div class="step-card step-s3">
+            <span class="step-bg-num" aria-hidden="true">03</span>
+            <div class="step-card-inner">
+              <div class="step-icon-wrap">📅</div>
+              <span class="step-free-badge">FREE</span>
+              <p class="step-num-label">Step 03</p>
+              <h3>4-week mentorship</h3>
+              <p>Structured sessions covering investing essentials and the strategies that actually compound.</p>
+            </div>
+          </div>
+
+          <div class="step-card step-s4">
+            <span class="step-bg-num" aria-hidden="true">04</span>
+            <div class="step-card-inner">
+              <div class="step-icon-wrap">🏆</div>
+              <span class="step-free-badge">FREE</span>
+              <p class="step-num-label">Step 04</p>
               <h3>Final 1-on-1 follow-up</h3>
-              <p>A closing session to review progress and refine your strategy.</p>
+              <p>A closing session to review your progress, sharpen your plan, and answer what is still open.</p>
             </div>
-          </li>
-        </ol>
+          </div>
+
+        </div>
+
+        <div class="steps-footer-note">
+          <span>→</span>
+          <p style="margin:0;"><strong>Every step is free.</strong> No fees, no upselling, no hidden charges — ever.</p>
+        </div>
+
       </div>
     </section>
 
