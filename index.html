@@ -1,93 +1,532 @@
-SMIFE Stock market is for everyone
-How it works Guarantee FAQ Contact
-Book a call
-SMIFE · Stock market is for everyone
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMIFE — Stock market is for everyone</title>
+  <meta name="description" content="SMIFE — Stock market is for everyone. A free, client-exclusive 4-week mentorship in investing and the stock market. No fees. No upselling. Based in Chandigarh." />
 
-Markets made simple,
-mentorship made personal.
-A 4-week, 1-on-1 mentorship in stocks and the markets. No fees. No upselling. Ever.
+  <!-- Favicon: ND monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a3a2a'/%3E%3Ctext x='3' y='23' font-family='Georgia,serif' font-size='17' font-weight='700' fill='white'%3END%3C/text%3E%3C/svg%3E" />
 
-Book a free call See how it works
-How it works
-Four steps from curiosity to confident investor. Every one of them, free of cost.
+  <meta property="og:title" content="SMIFE — Stock market is for everyone" />
+  <meta property="og:description" content="A free, 4-week mentorship in investing and the stock market. No fees. No upselling. Based in Chandigarh." />
+  <meta property="og:image" content="https://www.ndpms.in/assets/og-image.jpg" />
+  <meta property="og:url" content="https://www.ndpms.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="SMIFE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SMIFE — Stock market is for everyone" />
+  <meta name="twitter:description" content="A free, 4-week mentorship in investing and the stock market. No fees. No upselling." />
+  <meta name="twitter:image" content="https://www.ndpms.in/assets/og-image.jpg" />
 
-1
-💬
-Free
-Step 01
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 
-First 1-on-1 session
-A personal consultation to understand where you are today and what you want from the markets.
+  <style>
+    /* ── Infographic section ── */
+    .hiw-flow {
+      margin-top: 3rem;
+      position: relative;
+    }
 
-2
-🏦
-Free
-Step 02
+    .hiw-flow-svg {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-Open your Demat account
-We help you open a Demat account at zero cost. No paperwork chase, no hidden charges.
+    .hiw-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
 
-3
-📈
-Free
-Step 03
+    .hiw-card {
+      border-radius: 20px;
+      padding: 1.5rem 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hiw-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+    }
 
-4-week mentorship
-Structured sessions covering investing essentials and the strategies that actually compound.
+    .hiw-ghost {
+      position: absolute;
+      bottom: -10px;
+      right: 6px;
+      font-size: 88px;
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0.09;
+      pointer-events: none;
+      font-family: Georgia, serif;
+    }
 
-4
-🏆
-Free
-Step 04
+    .hiw-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 26px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
 
-Final 1-on-1 follow-up
-A closing session to review your progress, sharpen your plan, and answer what is still open.
+    .hiw-badge {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
 
-✦
-Every step is free. No fees, no upselling, no hidden charges — at any point in the program, ever.
+    .hiw-step-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
 
-The SMIFE Guarantee
-100% free. No fees. No upselling.
+    .hiw-card h3 {
+      font-size: 14.5px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      line-height: 1.3;
+    }
 
-Every step of the program — from opening your account through the final follow-up — is delivered at zero cost. There is nothing to buy at the end, and nothing to upgrade along the way. The program exists to make you a more confident, informed investor.
+    .hiw-card p {
+      font-size: 12.5px;
+      line-height: 1.7;
+      margin: 0;
+    }
 
-Common questions
-Things prospective mentees usually want to know before signing up.
+    .hiw-arrow {
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      transform: translateY(-50%);
+      font-size: 20px;
+      z-index: 2;
+      opacity: 0.5;
+    }
 
-Is it really 100% free?
-+
+    .c1 { background: #EEEDFE; }
+    .c1 .hiw-ghost { color: #534AB7; }
+    .c1 .hiw-icon { background: #534AB7; color: #fff; }
+    .c1 .hiw-badge { background: #D0CDFA; color: #3C3489; }
+    .c1 .hiw-step-label { color: #7066CC; }
+    .c1 h3 { color: #26215C; }
+    .c1 p { color: #5B53A8; }
 
-How is this different from free content on YouTube or Telegram?
-+
+    .c2 { background: #E1F5EE; }
+    .c2 .hiw-ghost { color: #0F6E56; }
+    .c2 .hiw-icon { background: #0F6E56; color: #fff; }
+    .c2 .hiw-badge { background: #9FE1CB; color: #085041; }
+    .c2 .hiw-step-label { color: #0F6E56; }
+    .c2 h3 { color: #04342C; }
+    .c2 p { color: #1A7A63; }
 
-Do I need prior experience or a large amount of capital?
-+
+    .c3 { background: #FAEEDA; }
+    .c3 .hiw-ghost { color: #BA7517; }
+    .c3 .hiw-icon { background: #D98A1A; color: #fff; }
+    .c3 .hiw-badge { background: #FAC775; color: #633806; }
+    .c3 .hiw-step-label { color: #994E0A; }
+    .c3 h3 { color: #412402; }
+    .c3 p { color: #7A4510; }
 
-Is the mentorship online or in person?
-+
+    .c4 { background: #FBEAF0; }
+    .c4 .hiw-ghost { color: #D4537E; }
+    .c4 .hiw-icon { background: #C03E68; color: #fff; }
+    .c4 .hiw-badge { background: #F4C0D1; color: #72243E; }
+    .c4 .hiw-step-label { color: #993556; }
+    .c4 h3 { color: #4B1528; }
+    .c4 p { color: #8C3050; }
 
-What if I miss a session?
-+
+    .hiw-guarantee {
+      margin-top: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: linear-gradient(135deg, #1a3a2a 0%, #0f2319 100%);
+      border-radius: 16px;
+      padding: 1.1rem 1.5rem;
+      color: #fff;
+    }
+    .hiw-guarantee-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .hiw-guarantee p {
+      margin: 0;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: #d4e8d8;
+    }
+    .hiw-guarantee strong { color: #fff; }
 
-Why do you offer this for free?
-+
+    @media (max-width: 700px) {
+      .hiw-cards { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .hiw-flow-svg { display: none; }
+    }
+    @media (max-width: 400px) {
+      .hiw-cards { grid-template-columns: 1fr; }
+    }
 
-What happens after the 4 weeks are over?
-+
+    /* ── FAQ Accordion ── */
+    .faq-list {
+      margin-top: 2rem;
+    }
+    .faq-list > div {
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .faq-list > div:first-child {
+      border-top: 1px solid #e5e7eb;
+    }
+    .faq-list dt {
+      margin: 0;
+    }
+    .faq-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 1.1rem 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: #111;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: inherit;
+    }
+    .faq-toggle:hover {
+      color: #1e3a5f;
+    }
+    .faq-toggle .faq-icon {
+      flex-shrink: 0;
+      font-size: 20px;
+      font-weight: 300;
+      color: #6b7280;
+      transition: transform 0.25s ease;
+      line-height: 1;
+    }
+    .faq-toggle[aria-expanded="true"] .faq-icon {
+      transform: rotate(45deg);
+      color: #1e3a5f;
+    }
+    .faq-list dd {
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.25s ease;
+      padding: 0;
+    }
+    .faq-list dd.open {
+      max-height: 400px;
+      padding-bottom: 1.1rem;
+    }
+    .faq-list dd p {
+      margin: 0;
+      font-size: 14.5px;
+      line-height: 1.75;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
 
-Book a call
-Reach out through any channel below. We'll set up your first session.
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="SMIFE home">
+        <span class="brand-wordmark">SMIFE</span>
+        <span class="brand-tagline">Stock market is for everyone</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#guarantee">Guarantee</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#contact">Book a call</a>
+    </div>
+  </header>
 
-Phone
-+91 98150 11317
-+91 98884 11317
-WhatsApp
-Message on WhatsApp
-Email
-ndpmsmentorship@ndpms.in
-Office
-Northern India Stock Exchange Building,
-Sector 17 D, Chandigarh 160017
-Content on this site is for educational purposes only and does not constitute investment advice. Investments in securities markets are subject to market risks. Read all related documents carefully before investing.
+  <main id="top">
 
-© 2026 SMIFE · Terms & conditions
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">SMIFE · Stock market is for everyone</p>
+        <h1>Markets made simple,<br><em>mentorship</em> made personal.</h1>
+        <p class="lede">A 4-week, 1-on-1 mentorship in stocks and the markets. No fees. No upselling. Ever.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Book a free call</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <p class="section-sub">Four steps from curiosity to confident investor. Every one of them, free of cost.</p>
+
+        <div class="hiw-flow">
+
+          <svg class="hiw-flow-svg" viewBox="0 0 900 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="none">
+            <path d="M112 30 C200 10, 300 50, 450 30 C600 10, 700 50, 788 30"
+                  stroke="#C8D8B0" stroke-width="2.5" stroke-dasharray="8 6"
+                  stroke-linecap="round" fill="none"/>
+            <polygon points="310,22 325,30 310,38" fill="#C8D8B0" opacity="0.7"/>
+            <polygon points="568,22 583,30 568,38" fill="#C8D8B0" opacity="0.7"/>
+            <polygon points="758,22 773,30 758,38" fill="#C8D8B0" opacity="0.7"/>
+          </svg>
+
+          <div class="hiw-cards">
+            <div class="hiw-card c1">
+              <span class="hiw-ghost" aria-hidden="true">1</span>
+              <div class="hiw-icon">💬</div>
+              <span class="hiw-badge">Free</span>
+              <p class="hiw-step-label">Step 01</p>
+              <h3>First 1-on-1 session</h3>
+              <p>A personal consultation to understand where you are today and what you want from the markets.</p>
+            </div>
+            <div class="hiw-card c2">
+              <span class="hiw-ghost" aria-hidden="true">2</span>
+              <div class="hiw-icon">🏦</div>
+              <span class="hiw-badge">Free</span>
+              <p class="hiw-step-label">Step 02</p>
+              <h3>Open your Demat account</h3>
+              <p>We help you open a Demat account at zero cost. No paperwork chase, no hidden charges.</p>
+            </div>
+            <div class="hiw-card c3">
+              <span class="hiw-ghost" aria-hidden="true">3</span>
+              <div class="hiw-icon">📈</div>
+              <span class="hiw-badge">Free</span>
+              <p class="hiw-step-label">Step 03</p>
+              <h3>4-week mentorship</h3>
+              <p>Structured sessions covering investing essentials and the strategies that actually compound.</p>
+            </div>
+            <div class="hiw-card c4">
+              <span class="hiw-ghost" aria-hidden="true">4</span>
+              <div class="hiw-icon">🏆</div>
+              <span class="hiw-badge">Free</span>
+              <p class="hiw-step-label">Step 04</p>
+              <h3>Final 1-on-1 follow-up</h3>
+              <p>A closing session to review your progress, sharpen your plan, and answer what is still open.</p>
+            </div>
+          </div>
+
+          <div class="hiw-guarantee">
+            <span class="hiw-guarantee-icon">✦</span>
+            <p><strong>Every step is free.</strong> No fees, no upselling, no hidden charges — at any point in the program, ever.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section id="guarantee" class="section section-alt">
+      <div class="container narrow">
+        <h2 class="section-title">The SMIFE Guarantee</h2>
+        <p class="guarantee-line"><strong>100% free.</strong> No fees. No upselling.</p>
+        <p>
+          Every step of the program — from opening your account through the final follow-up —
+          is delivered at zero cost. There is nothing to buy at the end, and nothing to upgrade
+          along the way. The program exists to make you a more confident, informed investor.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container narrow">
+        <h2 class="section-title">Common questions</h2>
+        <p class="section-sub">Things prospective mentees usually want to know before signing up.</p>
+
+        <dl class="faq-list">
+
+          <div>
+            <dt>
+              <button class="faq-toggle" aria-expanded="false" aria-controls="faq1">
+                Is it really 100% free?
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd id="faq1">
+              <p>Yes — at every stage. Opening the Demat account, the consultations, the four weeks of mentorship, and the closing follow-up are all delivered at zero cost. There is no paid upgrade or premium tier at the end. The only thing we ask is that you take it seriously.</p>
+            </dd>
+          </div>
+
+          <div>
+            <dt>
+              <button class="faq-toggle" aria-expanded="false" aria-controls="faq2">
+                How is this different from free content on YouTube or Telegram?
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd id="faq2">
+              <p>YouTube and Telegram are one-way and generic. SMIFE is one-on-one — every session is shaped around your starting point, your goals, and the questions you actually have. You also get scheduled accountability instead of a "watch when you feel like it" model.</p>
+            </dd>
+          </div>
+
+          <div>
+            <dt>
+              <button class="faq-toggle" aria-expanded="false" aria-controls="faq3">
+                Do I need prior experience or a large amount of capital?
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd id="faq3">
+              <p>Neither. We start from first principles, and you can begin investing with as little as ₹500 a month if that fits your situation. The program is built for absolute beginners as much as for people who have dabbled in the markets for years without a clear method.</p>
+            </dd>
+          </div>
+
+          <div>
+            <dt>
+              <button class="faq-toggle" aria-expanded="false" aria-controls="faq4">
+                Is the mentorship online or in person?
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd id="faq4">
+              <p>The mentorship is conducted entirely online — over video call, at a time that suits your schedule. You don't need to visit an office. All sessions happen remotely, making it accessible from anywhere in India.</p>
+            </dd>
+          </div>
+
+          <div>
+            <dt>
+              <button class="faq-toggle" aria-expanded="false" aria-controls="faq5">
+                What if I miss a session?
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd id="faq5">
+              <p>We reschedule. Sessions are one-on-one and happen on your calendar, not a fixed batch timetable. Missing one does not push you out of the program.</p>
+            </dd>
+          </div>
+
+          <div>
+            <dt>
+              <button class="faq-toggle" aria-expanded="false" aria-controls="faq6">
+                Why do you offer this for free?
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd id="faq6">
+              <p>We believe in building real, long-term relationships — not transactions. When we help you understand the markets, you gain a trusted advisor for life, and we gain a client who actually knows what they're doing. That kind of partnership matters far more to us than a one-time fee.</p>
+            </dd>
+          </div>
+
+          <div>
+            <dt>
+              <button class="faq-toggle" aria-expanded="false" aria-controls="faq7">
+                What happens after the 4 weeks are over?
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+            </dt>
+            <dd id="faq7">
+              <p>You stay in touch. We do not gate you out after the program. The boundary is on structured mentorship time, not on access — if you have a question later, write to us and we will help where we can.</p>
+            </dd>
+          </div>
+
+        </dl>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2 class="section-title">Book a call</h2>
+        <p class="section-sub">Reach out through any channel below. We'll set up your first session.</p>
+
+        <dl class="contact-grid">
+          <div>
+            <dt>Phone</dt>
+            <dd>
+              <a href="tel:+919815011317">+91 98150 11317</a><br />
+              <a href="tel:+919888411317">+91 98884 11317</a>
+            </dd>
+          </div>
+          <div>
+            <dt>WhatsApp</dt>
+            <dd><a href="https://wa.me/919815011317">Message on WhatsApp</a></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:ndpmsmentorship@ndpms.in">ndpmsmentorship@ndpms.in</a></dd>
+          </div>
+          <div>
+            <dt>Office</dt>
+            <dd>Northern India Stock Exchange Building,<br />Sector 17 D, Chandigarh 160017</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-disclaimer">
+        Content on this site is for educational purposes only and does not constitute
+        investment advice. Investments in securities markets are subject to market risks.
+        Read all related documents carefully before investing.
+      </p>
+      <p class="footer-meta">
+        &copy; <span id="year">2026</span> SMIFE ·
+        <a href="https://www.ndpms.in/terms-and-conditions">Terms &amp; conditions</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq-toggle').forEach(function(b) {
+          b.setAttribute('aria-expanded', 'false');
+          document.getElementById(b.getAttribute('aria-controls')).classList.remove('open');
+        });
+        // Open clicked if it was closed
+        if (!expanded) {
+          this.setAttribute('aria-expanded', 'true');
+          document.getElementById(this.getAttribute('aria-controls')).classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
